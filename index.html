@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navigation u-margin-bottom-big">
+      <div class="navigation__logo-box">
+        <img src="assets/images/logo.svg" alt="logo" class="navigation__logo" />
+      </div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link small-text">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link small-text">New</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link small-text">Popular</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link small-text">Trending</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link small-text">Categories</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- POPUP OPENER -->
+    <input type="checkbox" class="pop__checkbox" id="pop-toggle" />
+    <label for="pop-toggle" class="pop__button"
+      ><span class="pop__icon">&nbsp;</span></label
+    >
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <ul class="popup__list">
+          <li class="popup__item">
+            <a href="#" class="popup__link">1 - Home</a>
+          </li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">2 - New</a>
+          </li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">3 - Popular</a>
+          </li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">4 - Trending</a>
+          </li>
+          <li class="popup__item">
+            <a href="#" class="popup__link">5 - Categories</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <header class="header">
+      <section class="header__main-news">
+        <!-- ART DIRECTION CHANGING IMAGE WHEN BELOW 900PX -->
+        <picture class="header__img">
+          <source
+            srcset="assets/images/image-web-3-mobile.jpg"
+            media="(max-width: 56.25em)"
+          />
+          <img
+            src="assets/images/image-web-3-desktop.jpg"
+            alt="Header image"
+            class="header__img"
+          />
+        </picture>
+        <!-- <img
+          src="assets/images/image-web-3-desktop.jpg"
+          alt=""
+          class="header__img"
+        /> -->
+
+        <div class="header__headline">
+          <h1 class="header__heading heading-primary">
+            Bright Future of Web 3.0?
+          </h1>
+          <div class="header__sub-text">
+            <p class="small-text">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button class="header__btn">Read more</button>
+          </div>
+        </div>
+      </section>
+      <section class="header__side-news">
+        <h2 class="header__secondary-heading heading-secondary">New</h2>
+        <div class="header__news-piece">
+          <h3 class="heading-tertiary u-margin-bottom-medium">
+            Hydrogen VS Electric Cars
+          </h3>
+          <p class="small-text">
+            Will hydrogen-fueled cars ever catch up to EVs?
+          </p>
+        </div>
+
+        <div class="header__news-piece">
+          <h3 class="heading-tertiary u-margin-bottom-medium">
+            The Downsides of AI Artistry
+          </h3>
+          <p class="small-text">
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+        <div class="header__news-piece">
+          <h3 class="heading-tertiary u-margin-bottom-medium">
+            Private funding by VC firms is down
+          </h3>
+          <p class="small-text">50% YOY. We take a look at what that means.</p>
+        </div>
+      </section>
+    </header>
+    <main class="main">
+      <div class="main__other-news">
+        <img
+          src="/assets/images/image-retro-pcs.jpg"
+          alt="news-image-1"
+          class="main__img"
+        />
+        <div class="main__text">
+          <h2 class="heading-secondary">01</h2>
+          <h3 class="">Reviving Retro PCs</h3>
+          <p class="small-text">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </div>
+      <div class="main__other-news">
+        <img
+          src="/assets/images/image-top-laptops.jpg"
+          alt="news-image-2"
+          class="main__img"
+        />
+        <div class="main__text">
+          <h2 class="heading-secondary">02</h2>
+          <h3 class="">Top 10 Laptops of 2022</h3>
+          <p class="small-text">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </div>
+
+      <div class="main__other-news">
+        <img
+          src="assets/images/image-gaming-growth.jpg"
+          alt="news-image-3"
+          class="main__img"
+        />
+        <div class="main__text">
+          <h2 class="heading-secondary">03</h2>
+          <h3 class="">The Growth of Gaming</h3>
+          <p class="small-text">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </div>
+      <div></div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

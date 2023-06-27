@@ -1,0 +1,56 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: $max-screen-width;
+  margin: 1rem auto 3rem;
+  position: relative;
+
+  @include respond(tab-port) {
+    align-self: flex-end;
+  }
+  //Logo
+  &__logo-box {
+    margin-right: auto;
+  }
+
+  &__logo {
+    @include respond(tab-port) {
+      max-width: 4rem;
+    }
+  }
+
+  //Navigation items
+  &__nav {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: inline-flex;
+  }
+
+  &__item:not(:last-child) {
+    margin: 0 0.5rem;
+  }
+
+  &__item:last-child {
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-very-dark-blue;
+      text-decoration: underline;
+    }
+  }
+}

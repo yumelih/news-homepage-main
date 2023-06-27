@@ -1,0 +1,71 @@
+.main {
+  max-width: $max-screen-width;
+  margin: 4rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond(phone) {
+    max-width: $max-screen-width;
+    margin: 4rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__other-news {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    @include respond(tab-port) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      margin: 0 2rem 4rem 0;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 1.5rem;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    // flex-basis: 33.33%;
+  }
+
+  &__img {
+    max-height: 11rem;
+    max-width: 100%;
+    margin: 0 2rem;
+
+    @include respond(tab-port) {
+      margin: 0 0 1rem 0;
+    }
+
+    @include respond(phone) {
+      margin: 0 2rem 0 0;
+      max-height: 15rem;
+    }
+  }
+
+  &__text {
+    max-width: 17rem;
+    h2 {
+      color: $color-grayish-light-blue;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      @include respond(tab-land) {
+        font-size: 2.5rem;
+      }
+    }
+
+    h3 {
+      color: $color-black;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      @include respond(tab-land) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

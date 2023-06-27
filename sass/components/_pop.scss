@@ -1,0 +1,77 @@
+.pop {
+  &__checkbox {
+    display: none;
+  }
+
+  //placement and style of the background of the icon
+
+  &__button {
+    display: none;
+    background-color: transparent;
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border-radius: 50%;
+    z-index: 9999;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__checkbox:checked ~ .popup {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /// 3 line icon
+
+  &__icon {
+    position: relative;
+    z-index: 2001;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-black;
+      display: inline-block;
+      transition: all 0.4s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+
+    &::after {
+      top: 0.7rem;
+    }
+  }
+
+  &__button:hover &__icon {
+    background-color: transparent;
+  }
+
+  &__button:hover &__icon::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &__button:hover &__icon::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+}
